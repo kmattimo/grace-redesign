@@ -1,4 +1,5 @@
 include ../mixins/flash-messages
+include ..//mixins/header
 
 doctype html
 html
@@ -9,11 +10,15 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
-		title= title || 'test'
+		title= title || 'Grace Girl\'s Home'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
 		link(href="/styles/site.css", rel="stylesheet")
+
+		block fonts
+			link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Zilla+Slab:300", rel="stylesheet")
+
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
@@ -36,31 +41,33 @@ html
 	body
 
 		//- HEADER
-		#header: .container
+		//- #header: .container
+		block header
+			+header(page.header)
 
 			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
 			//- ... or completely change this header to suit your design.
 
-			div(role="navigation").navbar.navbar-default
-				.container-fluid
-					.navbar-header
-						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-							span.sr-only Toggle navigation
-							span.icon-bar
-							span.icon-bar
-							span.icon-bar
-						a.navbar-brand(href='/') test
-					.collapse.navbar-collapse
-						ul.nav.navbar-nav.navbar-left
-							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						ul.nav.navbar-nav.navbar-right
-							if user
-								if user.canAccessKeystone
-									li: a(href='/keystone') Open Keystone
-								li: a(href='/keystone/signout') Sign Out
-							else
-								li: a(href='/keystone/signin') Sign In
+			//- div(role="navigation").navbar.navbar-default
+			//- 	.container-fluid
+			//- 		.navbar-header
+			//- 			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+			//- 				span.sr-only Toggle navigation
+			//- 				span.icon-bar
+			//- 				span.icon-bar
+			//- 				span.icon-bar
+			//- 			a.navbar-brand(href='/') test
+			//- 		.collapse.navbar-collapse
+			//- 			ul.nav.navbar-nav.navbar-left
+			//- 				each link in navLinks
+			//- 					li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+			//- 			ul.nav.navbar-nav.navbar-right
+			//- 				if user
+			//- 					if user.canAccessKeystone
+			//- 						li: a(href='/keystone') Open Keystone
+			//- 					li: a(href='/keystone/signout') Sign Out
+			//- 				else
+			//- 					li: a(href='/keystone/signin') Sign In
 
 		//- BODY
 		#body
@@ -80,12 +87,7 @@ html
 			block content
 
 
-		//- FOOTER
-		.container: #footer
-
-			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
-
+		
 
 		//- JAVASCRIPT
 
@@ -96,7 +98,7 @@ html
 
 		//- Customise which Bootstrap javascript files are served by including
 		//- them specifically here, instead of bootstrap-3.3.5.min.js
-		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
+		//- script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
 
 		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
 		//- which generate links to edit content for users who can access Keystone

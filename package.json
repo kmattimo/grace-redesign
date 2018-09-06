@@ -5,10 +5,10 @@
   "dependencies": {
     "keystone": "4.0.0",
     "lodash": "^4.13.1",
-    "pug": "2.0.0-beta11", 
-    "node-sass": "4.5.0",
-    "node-sass-middleware": "0.11.0", 
-    "dotenv": "4.0.0", 
+    "pug": "2.0.0-beta11",
+    "node-sass": "4.9.3",
+    "node-sass-middleware": "0.11.0",
+    "dotenv": "4.0.0",
     "async": "2.1.4"
   },
   "devDependencies": {
@@ -21,4 +21,3 @@
     "start": "node keystone.js"
   }
 }
-
