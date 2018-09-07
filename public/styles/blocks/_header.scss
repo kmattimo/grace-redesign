@@ -1,13 +1,20 @@
 .header {
-    background-color: pink;
+    background-color: $color-rose;
     height: 300px;
     display: flex;
     align-content: center;
     justify-content: center;
+    color: $color-white;
 
     &__title {
         align-self: center;
         font-size: 32px;
+    }
+
+    &__main-menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
     &__logo {

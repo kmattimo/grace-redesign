@@ -1,5 +1,7 @@
 include ../mixins/flash-messages
 include ..//mixins/header
+include ..//mixins/main-menu
+
 
 doctype html
 html
@@ -37,12 +39,9 @@ html
 		//- Add any other template-specific HEAD tags by extending the head block
 		block head
 
-	//- HTML BODY
 	body
-
-		//- HEADER
-		//- #header: .container
 		block header
+			+main-menu(page.menu)
 			+header(page.header)
 
 			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
@@ -89,16 +88,9 @@ html
 
 		
 
-		//- JAVASCRIPT
-
-		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
-		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
-		//- you can upgrade to 2.1.4 (also bundled) for better performance.
-		script(src='/js/jquery/jquery-1.11.3.min.js')
-
-		//- Customise which Bootstrap javascript files are served by including
-		//- them specifically here, instead of bootstrap-3.3.5.min.js
-		//- script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
+	
+		script(src='/js/jquery/jquery-2.1.4.min.js')
+		script(src='/js/app.js')
 
 		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
 		//- which generate links to edit content for users who can access Keystone
