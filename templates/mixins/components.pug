@@ -5,7 +5,8 @@ include ./quote
 mixin components(components)
     each component in components
         .section
-            if component.__t == "RTE"
-                +rte(component)
-            if component.__t == "Quote"
-                +quote(component)
+            .container
+                if component.__t == "RTE"
+                    +rte(component)
+                if component.__t == "Quote"
+                    +quote(component)

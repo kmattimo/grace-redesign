@@ -1,0 +1,19 @@
+@mixin link() {
+    @include transition(color);
+}
+
+@mixin link--white() {
+    color: $color-white;
+    &:hover {
+        color: $color-almond;
+    }
+}
+
+@mixin link--red() {
+    color: $color-red;
+
+    &:hover {
+        //TODO: which color? 
+        color: $color-rose;
+    }
+}

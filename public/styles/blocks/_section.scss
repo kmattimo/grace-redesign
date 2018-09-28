@@ -4,7 +4,7 @@
 
     //TODO: isolate to <section> elements?
     //OR maybe just give the components a checkbox
-    &:nth-of-type(2n){
-        background-color: $color-almond;
+    &:nth-of-type(2n + 1){
+        background-color: $color-background;
     }
 }

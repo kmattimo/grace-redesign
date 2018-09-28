@@ -46,7 +46,7 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	pages: 'pages',
 	components: ['rtes', 'quotes'],
-	settings: ['navigations']
+	settings: ['navigations', 'settings']
 });
 
 // Start Keystone to connect to your database and initialise the web server

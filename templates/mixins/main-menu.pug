@@ -1,4 +1,9 @@
 mixin main-menu(menu)
     .main-menu
-       .main-menu__links
-            a.main-menu__link.main-menu__link--primary="Hello"
+        .main-menu__links
+            each link in menu.links
+                a.main-menu__link.main-menu__link--primary(href=link.url)=link.name
+                if link.secondary && link.secondary.length
+                    .main-menu__secondary-links
+                        each secondary in link.secondary
+                            a.main-menu__link.main-menu__link--secondary(href=secondary.url)=secondary.name

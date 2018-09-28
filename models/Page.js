@@ -12,6 +12,8 @@ Page.add({
   title: { type: String, required: true },
   menuTitle: { type: String, label: 'Menu Title', note: 'Optionally create a shorter title for navigation elements' },
   headerImage: {type: Types.CloudinaryImage, label: 'Header Image'},
+  secondaryNavigation: {type: Types.Relationship, ref: 'Page', many: true, label: 'Secondary Navigation'},
+
   components: {type: Types.Relationship, ref: 'ComponentBase', many: true }
 });
 Page.register();

@@ -1,3 +1,9 @@
+@mixin rte-styles() {
+    a {
+        @include link--red;
+    }
+}
+
 .rte {
-    
+    @include rte-styles();
 }
