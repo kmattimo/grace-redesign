@@ -4,7 +4,7 @@ var Types = keystone.Field.Types;
 
 var Page = new keystone.List('Page', {
   map: { name: 'title' },
-  autokey: { path: 'slug', from: 'title', unique: true, fixed: true },
+  autokey: { path: 'slug', from: 'title', unique: true /*, fixed: true*/ },
   //header image
 });
 Page.add({
