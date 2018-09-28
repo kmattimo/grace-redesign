@@ -5,8 +5,7 @@ exports.create = {
 		{name: 'Navigation'}
 	],
 
-	//TODO: verify this works
 	Page: [ 
-		{name: 'Home', slug: '/'}
+		{title: 'Home', slug: '/'}
 	]
 };
