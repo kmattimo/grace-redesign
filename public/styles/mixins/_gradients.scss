@@ -1,0 +1,11 @@
+
+$gradient-opacity: .4;
+
+@mixin gradient3() {
+    //color red to color almond 
+    background: linear-gradient(90deg, rgba($color-red, $gradient-opacity) 0%, rgba($color-almond, $gradient-opacity) 100%);
+}
+
+@mixin header-gradient($args...) {
+    @include gradient3($args...)
+  }

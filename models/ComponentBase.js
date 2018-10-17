@@ -13,7 +13,9 @@ ComponentBase.register();
 
 var RTE = new keystone.List('RTE', { inherits: ComponentBase });
 RTE.add({
+  Header: {type: Types.Text},
   Content: {type: Types.Html, wysiwyg: true},
+  //TODO: make CTA a mixin here, including: internal/external link, label
 });
 RTE.register();
 
@@ -24,6 +26,7 @@ Quote.add({
   Author: {type: String},
 });
 Quote.register();
+
 
 
 //When you add new components add them to the components.pug switch case

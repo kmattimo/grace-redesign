@@ -1,2 +1,5 @@
 mixin rte(rte)
-    .rte!=rte.Content
+    .rte 
+        if(rte.Header)
+            h2.rte__header=rte.Header
+        .rte__content!=rte.Content

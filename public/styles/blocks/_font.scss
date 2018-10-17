@@ -1,0 +1,106 @@
+$fonts__light: 300;
+$fonts__regular: 400;
+$fonts__semibold: 600;
+
+.font {
+    &__h1 {
+      font-weight: $fonts__light;
+      font-size: 36px;
+      line-height: 36px;
+    //   letter-spacing: 0;
+    }
+
+    &__h2 {
+      font-weight: $fonts__regular;
+      font-size: 28px;
+      line-height: 32px;
+    //   letter-spacing: -0.3;
+    }
+
+    &__subhead1 {
+      font-weight: $fonts__regular;
+      font-size: 28px;
+      line-height: 40px;
+    //   letter-spacing: -0.4;
+    }
+
+    &__subhead2 {
+      font-weight: $fonts__semibold;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 1.3;
+      text-transform: uppercase;
+    }
+
+    &__body {
+      font-weight: $fonts__regular;
+      font-size: 16px;
+      line-height: 23px;
+      letter-spacing: 0;
+      &--semibold {
+        font-weight: $fonts__semibold;
+      }
+    }
+
+    // &__body2 {
+    //   font-weight: $fonts__regular;
+    //   font-size: 16px;
+    //   line-height: 23px;
+    //   letter-spacing: 0;
+    //   &--semibold {
+    //     font-weight: $fonts__semibold;
+    //   }
+    // }
+    // &__body3 {
+    //   font-weight: $fonts__regular;
+    //   font-size: 14px;
+    //   line-height: 22px;
+    //   letter-spacing: 0;
+    // }
+    // &__body4 {
+    //   font-weight: $fonts__regular;
+    //   font-size: 12px;
+    //   line-height: 19px;
+    //   letter-spacing: 0.4;
+    // }
+
+  
+    @include above(tablet) {
+      &__h1 {
+        font-size: 72px;
+        line-height: 72px;
+        // letter-spacing: -1;
+      }
+      &__h2 {
+        font-size: 50px;
+        line-height: 57px;
+        // letter-spacing: -1;
+      }
+      &__subhead1 {
+        // font-weight: $fonts__regular;
+        font-size: 32px;
+        line-height: 48px;
+        // letter-spacing: -0.4;
+      }
+      &__subhead2 {
+        // font-weight: $fonts__semibold;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 1.3;
+        text-transform: uppercase;
+      }
+      
+      &__body {
+        // font-weight: $fonts__light; //DIFFERENT
+        font-size: 21px;
+        line-height: 31px;
+        letter-spacing: -0.4;
+        &--semibold {
+          font-weight: $fonts__semibold;
+        }
+      }
+  
+    }
+  
+
+  }

@@ -1,9 +1,23 @@
 @mixin rte-styles() {
+    @extend .font__body;
     a {
         @include link--red;
     }
 }
 
 .rte {
-    @include rte-styles();
+    position:relative; //for header-lines 
+
+    &__content {
+        @include rte-styles();
+    }
+
+    &__header {
+        font-style: italic;
+        color: $color-rose;
+        @include header-lines($color-rose);
+
+        @extend .font__subhead1;
+    }
+
 }
