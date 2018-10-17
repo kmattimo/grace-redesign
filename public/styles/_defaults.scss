@@ -6,3 +6,18 @@ html {
 h1,h2,h3,h4 {
 	@include font-serif;
 }
+
+a, input, button {
+	color: inherit;
+	display: inline-block;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	font: inherit;
+	text-decoration: none;
+	text-align: left;
+	cursor: pointer;
+	line-height: 1;
+	background: rgba(0, 0, 0, 0);
+	border: 0;
+	padding: 0;
+}

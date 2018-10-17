@@ -2,8 +2,9 @@
  
     position: fixed;
     width: 100%;
-    height: 100%;
-    background-color: $color-lavender;
+    // height: 100%;
+    height: 66%; //TODO: is this good? how about mobile?
+    background: $menu-gradient;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,13 +36,16 @@
         text-decoration: none;
 
         &--primary {
+            //TODO: use font class
             font-size: 36px;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         &--secondary {
+            //TODO: use font class
             font-size: 18px;
             display: inline-block;
+            font-weight: 400;
 
             &:not(:last-child) {
                 &::after {

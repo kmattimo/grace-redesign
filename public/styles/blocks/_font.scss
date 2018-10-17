@@ -2,6 +2,9 @@ $fonts__light: 300;
 $fonts__regular: 400;
 $fonts__semibold: 600;
 
+$fonts__bold: 700; //used for source sans
+
+
 .font {
     &__h1 {
       font-weight: $fonts__light;
@@ -25,11 +28,13 @@ $fonts__semibold: 600;
     }
 
     &__subhead2 {
-      font-weight: $fonts__semibold;
-      font-size: 12px;
-      line-height: 18px;
-      letter-spacing: 1.3;
-      text-transform: uppercase;
+      font-weight: $fonts__bold;
+      font-size: 16px;
+      line-height: 23px;
+      // font-size: 12px;
+      // line-height: 18px;
+      // letter-spacing: 1.3;
+      // text-transform: uppercase;
     }
 
     &__body {
@@ -83,11 +88,9 @@ $fonts__semibold: 600;
         // letter-spacing: -0.4;
       }
       &__subhead2 {
-        // font-weight: $fonts__semibold;
-        font-size: 12px;
-        line-height: 18px;
-        letter-spacing: 1.3;
-        text-transform: uppercase;
+        // // font-weight: $fonts__semibold;
+        // font-size: 12px;
+        // line-height: 18px;
       }
       
       &__body {

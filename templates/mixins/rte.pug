@@ -3,3 +3,5 @@ mixin rte(rte)
         if(rte.Header)
             h2.rte__header=rte.Header
         .rte__content!=rte.Content
+        if(rte.CtaLink)
+            a.button.rte__cta(href=rte.CtaLink)=rte.CtaLabel

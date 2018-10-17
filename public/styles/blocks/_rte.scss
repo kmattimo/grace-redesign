@@ -1,5 +1,6 @@
 @mixin rte-styles() {
     @extend .font__body;
+    // text-align: center;
     a {
         @include link--red;
     }
@@ -7,6 +8,7 @@
 
 .rte {
     position:relative; //for header-lines 
+    text-align: center;
 
     &__content {
         @include rte-styles();
@@ -16,8 +18,12 @@
         font-style: italic;
         color: $color-rose;
         @include header-lines($color-rose);
-
         @extend .font__subhead1;
+        margin-bottom: 1em;
+    }
+
+    &__cta {
+        margin: 1em;
     }
 
 }

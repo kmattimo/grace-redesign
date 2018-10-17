@@ -1,13 +1,13 @@
+var cta = require('./sharedFields/cta');
+
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-
 
 var ComponentBase = new keystone.List('ComponentBase', {
   map: { name: 'title' },
 });
 ComponentBase.add({
   title: { type: String, required: true },
-  type: {type: String }
 });
 ComponentBase.register();
 
@@ -15,8 +15,11 @@ var RTE = new keystone.List('RTE', { inherits: ComponentBase });
 RTE.add({
   Header: {type: Types.Text},
   Content: {type: Types.Html, wysiwyg: true},
-  //TODO: make CTA a mixin here, including: internal/external link, label
 });
+RTE.add({heading: 'Call to Action'})
+RTE.add({
+  ...cta()
+})
 RTE.register();
 
 
@@ -27,6 +30,16 @@ Quote.add({
 });
 Quote.register();
 
+
+// TODO: header is a bad name for titles ... what to call it? 
+
+//autocreate this one and link it wherever - the same latest news appears
+var LatestNews = new keystone.List('LatestNews', {inherits: ComponentBase});
+LatestNews.add({
+  Header: {type: Types.Text, default: 'Latest News'},
+
+});
+LatestNews.register();
 
 
 //When you add new components add them to the components.pug switch case

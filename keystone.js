@@ -11,7 +11,7 @@ var keystone = require('keystone');
 
 keystone.init({
 	'name': 'Grace Girls Home',
-	'brand': 'Grace Girls Home',
+	'brand': 'Grace Girls Home Keystone',
 
 	'sass': 'public',
 	'static': 'public',
@@ -23,6 +23,14 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'wysiwyg skin': 'lightgray',
+	'wysiwyg additional options': {
+		visualblocks_default_state: true,
+		// images_upload_url: '/api/upload',
+		relative_urls: true,
+		// document_base_url: '/',
+		browser_spellcheck: true
+	}
 });
 
 // Load your project's Models

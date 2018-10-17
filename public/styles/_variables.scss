@@ -12,3 +12,13 @@ $color-almond: #EFD9CE;
 
 //TODO: where is this in the pallette? I took this color from the rte background color of the design
 $color-background: #F9F4F0;
+
+
+$gradient-opacity: .4;
+
+$menu-opacity: 0.9;
+$gradient1: linear-gradient(90deg, rgba($color-navy, $menu-opacity) 0%, rgba($color-red, $menu-opacity) 50%, rgba($color-lavender, 1) 100%); //last piece is opaque
+$gradient3: linear-gradient(90deg, rgba($color-red, $gradient-opacity) 0%, rgba($color-almond, $gradient-opacity) 100%);
+
+$header-gradient: $gradient3;
+$menu-gradient: $gradient1;

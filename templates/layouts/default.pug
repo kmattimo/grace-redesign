@@ -20,7 +20,7 @@ html
 
 		block fonts
 			//- TODO: narrow down to fewer weights
-			link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Zilla+Slab:300,400,500,600,300i,400i,500i,600i", rel="stylesheet")
+			link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700|Zilla+Slab:300,400,500,600,300i,400i,500i,600i", rel="stylesheet")
 
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
@@ -45,31 +45,7 @@ html
 			+main-menu(page.menu)
 			+header(page.header)
 
-			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
-			//- ... or completely change this header to suit your design.
-
-			//- div(role="navigation").navbar.navbar-default
-			//- 	.container-fluid
-			//- 		.navbar-header
-			//- 			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-			//- 				span.sr-only Toggle navigation
-			//- 				span.icon-bar
-			//- 				span.icon-bar
-			//- 				span.icon-bar
-			//- 			a.navbar-brand(href='/') test
-			//- 		.collapse.navbar-collapse
-			//- 			ul.nav.navbar-nav.navbar-left
-			//- 				each link in navLinks
-			//- 					li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-			//- 			ul.nav.navbar-nav.navbar-right
-			//- 				if user
-			//- 					if user.canAccessKeystone
-			//- 						li: a(href='/keystone') Open Keystone
-			//- 					li: a(href='/keystone/signout') Sign Out
-			//- 				else
-			//- 					li: a(href='/keystone/signin') Sign In
-
-		//- BODY
+			
 		#body
 
 			//- NOTE:

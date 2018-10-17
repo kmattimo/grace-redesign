@@ -1,0 +1,35 @@
+.button {
+    $hover-speed: 150ms;
+  
+    @extend .font__subhead2;
+    line-height: 1;
+    padding: 8px 24px;
+    border: solid 1px;
+    border-radius: 3px;
+    transition: padding $hover-speed ease-in-out, margin $hover-speed ease-in-out;
+    color: $color-lavender;
+    white-space: nowrap;
+  
+    
+    &--hover,
+    &:hover,
+    &:focus {
+      padding: 12px 24px;
+      padding-bottom: 11px;
+      // margin: -4px;
+    }
+    &:focus {
+      outline:0;
+    }
+    // &--inactive,
+    // &[disabled] {
+    //   opacity: .5;
+    //   cursor: not-allowed;
+    //   &:hover,
+    //   &:focus {
+    //     margin: 0;
+    //     padding: 8px 20px;
+    //     padding-bottom: 7px;
+    //   }
+    // }
+  }

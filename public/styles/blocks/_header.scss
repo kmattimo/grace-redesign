@@ -10,7 +10,7 @@
     padding: 32px;
 
     &__gradient {
-        @include header-gradient;
+        background: $header-gradient;
         position: absolute;
         top: 0;
         right: 0;
@@ -33,10 +33,21 @@
     }
 
     &__main-menu-toggle {
+        // position: absolute;
+        // right: 0;
+        // top: 0;
+        z-index: 10; //show in open menu
+    }
+
+    &__top-right {
         position: absolute;
         right: 0;
         top: 0;
-        z-index: 10; //show in open menu
+
+        display: flex;
+        flex-direction: row;
+        // justify-content: flex-end;
+        align-items: center;
     }
 
     &__logo {
@@ -44,26 +55,25 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 100px;
-        height: 50px;
+        $logo-ratio: 2.2;
+        $logo-width: 150px;
+        width: $logo-width;
+        height: $logo-width / $logo-ratio;
         background-image: url('/images/logo.png');
         background-size: contain;
         background-repeat: no-repeat;
     }
 
-    //TODO: responsive
+    //TODO: responsive ... maybe hide them?
     &__links {
-        //wouldn't mind re-doing this to be more precise ...
-        position: absolute;
-        right: 50px;
+        //TODO: use font class
         font-size: 24px;
-        padding: 10px;
     }
 
     &__link {
         @include link--white;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: 600;
         margin-right: 30px;
     }
 }

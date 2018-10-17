@@ -1,5 +1,6 @@
 include ./rte
 include ./quote
+include ./latest-news
 
 
 mixin components(components)
@@ -10,3 +11,5 @@ mixin components(components)
                     +rte(component)
                 if component.__t == "Quote"
                     +quote(component)
+                if component.__t == "LatestNews"
+                    +latest-news(component)

@@ -4,13 +4,15 @@ mixin header(header)
         .header__inner
             a.header__logo(style="background-image: url('/images/logo-white.png')" href="/" title="Home")
 
-            if header.links && header.links.length
-                .header__links
-                    each link in header.links
-                        a.header__link.header__link--primary(href=link.url)=link.name
+            .header__top-right
+                if header.links && header.links.length
+                    .header__links
+                        each link in header.links
+                            a.header__link.header__link--primary(href=link.url)=link.name
 
-            button.header__main-menu-toggle.hamburger.hamburger--slider(type=button, role=navigation)
-                span.header__main-menu-toggle-box.hamburger-box
-                    span.header__main-menu-toggle-inner.hamburger-inner
+                button.header__main-menu-toggle.hamburger.hamburger--slider(type=button, role=navigation)
+                    span.header__main-menu-toggle-box.hamburger-box
+                        span.header__main-menu-toggle-inner.hamburger-inner
+                        
             h1.header__title=header.title
 
