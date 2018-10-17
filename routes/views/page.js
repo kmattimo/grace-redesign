@@ -26,7 +26,7 @@ exports = module.exports = function (req, res) {
 		]) => {
 
 			// console.log(settings);
-			console.log(navigation.menu);
+			// console.log(navigation.menu);
 
 			var headerImage = '';
 			if(page.headerImage && page.headerImage.secure_url)

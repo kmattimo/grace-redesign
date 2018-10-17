@@ -2,14 +2,18 @@
   "name": "grace-girls-home",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "8.12"
+  },
   "dependencies": {
+    "async": "2.1.4",
+    "dotenv": "4.0.0",
     "keystone": "4.0.0",
     "lodash": "^4.13.1",
-    "pug": "2.0.0-beta11",
     "node-sass": "4.9.3",
     "node-sass-middleware": "0.11.0",
-    "dotenv": "4.0.0",
-    "async": "2.1.4"
+    "pm2": "^3.2.2",
+    "pug": "2.0.0-beta11"
   },
   "devDependencies": {
     "eslint": "3.15.0",
@@ -19,7 +23,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node keystone.js",
+    "start": "pm2-runtime keystone.js -i max",
     "dev": "nodemon --watch routes keystone.js"
   }
 }
